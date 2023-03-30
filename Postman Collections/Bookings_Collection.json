@@ -1,0 +1,835 @@
+{
+	"info": {
+		"_postman_id": "35e8b71b-c769-4c83-a5e9-c3069e898e2f",
+		"name": "Bookings",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GetBookingIds",
+			"item": [
+				{
+					"name": "All booking test",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "bdeb206a-8941-4d90-a267-caf504863faa",
+								"exec": [
+									"var jsonData = pm.response.json();",
+									"",
+									"pm.test(\"To verify if user gets successful 200 status code\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"pm.test(\"To verify if response is not empty\", function () {",
+									"    ",
+									"    pm.expect(jsonData).to.not.have.lengthOf(0)",
+									"});",
+									"",
+									"pm.test(\"To verify if response contains the bookingid string\", function(){",
+									"pm.expect(pm.response.text()).to.include(\"bookingid\")",
+									"});",
+									"",
+									"",
+									"",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"_postman_id": "3e1e79f9-c5e1-438f-8d17-e0ba9f8e679e",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{bookingurl}}/booking"
+					},
+					"response": []
+				},
+				{
+					"name": "Check by firstname",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "75b72597-97de-4837-b590-17b410485048",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"pm.test(\"To verify if body has bookingid string\", function () {",
+									"    pm.expect(pm.response.text()).to.include(\"bookingid\");",
+									"});",
+									"",
+									"",
+									""
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "51985277-4654-4f9b-b4d5-d632fea3db67",
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"_postman_id": "c457a8f2-a328-4d9a-bf25-3c584bd5f818",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{bookingurl}}/booking?firstname=John",
+							"host": [
+								"{{bookingurl}}"
+							],
+							"path": [
+								"booking"
+							],
+							"query": [
+								{
+									"key": "firstname",
+									"value": "John"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Check by lastname",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "213ab0aa-a3b0-43e2-9af6-7b91c12eef89",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"pm.test(\"To verify if body has bookingid string\", function () {",
+									"    pm.expect(pm.response.text()).to.include(\"bookingid\");",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"_postman_id": "9495d9b8-47a4-47c7-aae3-d8da05292b2b",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{bookingurl}}/booking?lastname=Smith",
+							"host": [
+								"{{bookingurl}}"
+							],
+							"path": [
+								"booking"
+							],
+							"query": [
+								{
+									"key": "lastname",
+									"value": "Smith"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Response time check",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "acd6fd8b-7f68-4af0-9b8f-db0b4aa28a35",
+								"exec": [
+									"pm.test(\"Response time is less than 3000ms\", function () {",
+									"    pm.expect(pm.response.responseTime).to.be.below(3000);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"_postman_id": "0e48e5e3-981c-4ef4-8e30-bf82a3575aaf",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{bookingurl}}/booking"
+					},
+					"response": []
+				}
+			],
+			"_postman_id": "8eedb065-5e4e-46f5-b25e-ac576d89e5d9",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "c4574e93-f59f-4f1f-ae4c-7a40d513aac8",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "13a6bc04-6c55-4bc5-b990-be234bffcb53",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "CreateBooking",
+			"item": [
+				{
+					"name": "Successful Creation of booking",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "cf749155-ae8c-4f6a-bc3e-402f28a6f0b1",
+								"exec": [
+									"pm.test(\"To verify if user gets 200 status code after successful Post request\", function(){",
+									"pm.response.to.have.status(200);",
+									"});",
+									"",
+									"pm.test(\"To verify if Body matches bookingid string\", function () {",
+									"    pm.expect(pm.response.text()).to.include(\"bookingid\");",
+									"});",
+									"",
+									"pm.test(\"To verify the response string\", function () {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData.booking.firstname).to.eql(\"Vaibhav\");",
+									"});",
+									"",
+									"pm.test(\"To verify the response time\", function () {",
+									"    pm.expect(pm.response.responseTime).to.be.below(3000);",
+									"});",
+									"",
+									"const Response = pm.response.json();",
+									"pm.globals.set(\"BookingID\", Response.bookingid);",
+									"",
+									"const schema = {",
+									"\"type\": \"object\",",
+									"    \"properties\": {",
+									"        \"bookingid\": {",
+									"            \"type\": \"integer\"",
+									"        },",
+									"        \"booking\": {",
+									"            \"type\": \"object\",",
+									"            \"properties\": {",
+									"                \"firstname\": {",
+									"                    \"type\": \"string\"",
+									"                },",
+									"                \"lastname\": {",
+									"                    \"type\": \"string\"",
+									"                },",
+									"                \"totalprice\": {",
+									"                    \"type\": \"integer\"",
+									"                },",
+									"                \"depositpaid\": {",
+									"                    \"type\": \"boolean\"",
+									"                },",
+									"                \"bookingdates\": {",
+									"                    \"type\": \"object\",",
+									"                    \"properties\": {",
+									"                        \"checkin\": {",
+									"                            \"type\": \"string\",",
+									"                            \"format\": \"date\"",
+									"                        },",
+									"                        \"checkout\": {",
+									"                            \"type\": \"string\",",
+									"                            \"format\": \"date\"",
+									"                        }",
+									"                    },",
+									"                    \"required\": [\"checkin\", \"checkout\"]",
+									"                },",
+									"                \"additionalneeds\": {",
+									"                    \"type\": \"string\"    ",
+									"                }",
+									"            },",
+									"            \"required\": [\"firstname\", \"lastname\", \"totalprice\", \"depositpaid\", \"bookingdates\", \"additionalneeds\"]",
+									"        }",
+									"    },",
+									"    \"required\": [\"bookingid\", \"booking\"]",
+									"};",
+									"pm.test(\"Validating schema\", () =>{",
+									"pm.response.to.have.jsonSchema(schema);",
+									"",
+									"});",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"_postman_id": "a4ceef93-ef38-4ca5-9ab5-0be339291074",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"firstname\" : \"Vaibhav\",\n    \"lastname\" : \"ABCD\",\n    \"totalprice\" : 111,\n    \"depositpaid\" : true,\n    \"bookingdates\" : {\n        \"checkin\" : \"2018-01-01\",\n        \"checkout\" : \"2019-01-01\"\n    },\n    \"additionalneeds\" : \"Breakfast\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{bookingurl}}/booking"
+					},
+					"response": []
+				},
+				{
+					"name": "400 error",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "ff6e7844-a645-4f5c-8cc1-ee357200944e",
+								"exec": [
+									"pm.test(\"Status code is 400\", function () {",
+									"    pm.response.to.have.status(400);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"_postman_id": "35377cfb-85ff-4b2c-ae96-f17161fc5da3",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"firstname\" : \"Jim\",\n    \"lastname\" : \"Brown\",\n    \"totalprice\" : eeee,\n    \"depositpaid\" : true,\n    \"bookingdates\" : {\n        \"checkin\" : \"tetet\",\n        \"checkout\" : \"2019-01-01\"\n    },\n    \"additionalneeds\" : \"Breakfast\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{bookingurl}}/booking"
+					},
+					"response": []
+				}
+			],
+			"_postman_id": "b72edf8d-ca73-4489-9f84-feef79ccd191"
+		},
+		{
+			"name": "GetBooking",
+			"item": [
+				{
+					"name": "Valid Id",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "ded521f3-78a6-42fe-8051-d1a8fc625b3a",
+								"exec": [
+									"pm.test(\"To verify if Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"pm.test(\"To verify if response contains strings\", function(){",
+									"pm.expect(pm.response.text()).to.include(\"firstname\");",
+									"pm.expect(pm.response.text()).to.include(\"lastname\");",
+									"pm.expect(pm.response.text()).to.include(\"totalprice\");",
+									"pm.expect(pm.response.text()).to.include(\"depositpaid\");",
+									"});",
+									"",
+									"pm.test(\"to verify the first name in the response\", function(){",
+									"var jasonData = pm.response.json();",
+									"pm.expect(jasonData.firstname).to.eql(\"Vaibhav\");",
+									"});",
+									"",
+									"pm.test(\"Response time is less than 3000ms\", function () {",
+									"    pm.expect(pm.response.responseTime).to.be.below(3000);",
+									"});",
+									"",
+									"",
+									"",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"_postman_id": "f6992cd8-67d5-4914-be86-8c612042d133",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{bookingurl}}/booking/:bookingid",
+							"host": [
+								"{{bookingurl}}"
+							],
+							"path": [
+								"booking",
+								":bookingid"
+							],
+							"variable": [
+								{
+									"key": "bookingid",
+									"value": "{{BookingID}}",
+									"type": "string"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Invalid ID",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "f785d697-3584-45ae-955c-7c0c89c695bb",
+								"exec": [
+									"pm.test(\"To verify if Status code is 404\", function () {",
+									"    pm.response.to.have.status(404);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"_postman_id": "1dd5ccd5-39c7-48d2-8de4-7ec000160e7e",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{bookingurl}}/booking/ebdhjwbd"
+					},
+					"response": []
+				},
+				{
+					"name": "Validate Json Schema - GetBooking",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "49547b61-aefe-4f01-883a-a0a289520ded",
+								"exec": [
+									"    const schema = {",
+									"     \"type\": \"object\",",
+									"    \"properties\": {",
+									"        \"firstname\": {",
+									"            \"type\": \"string\"",
+									"        },",
+									"        \"lastname\": {",
+									"            \"type\": \"string\"",
+									"        },",
+									"        \"totalprice\": {",
+									"            \"type\": \"number\"",
+									"        },",
+									"        \"depositpaid\": {",
+									"            \"type\": \"boolean\"",
+									"        },",
+									"        \"bookingdates\": {",
+									"            \"type\": \"object\",",
+									"            \"properties\": {",
+									"                \"checkin\": {",
+									"                    \"type\": \"string\",",
+									"                    \"format\": \"date\"",
+									"                },",
+									"                \"checkout\": {",
+									"                    \"type\": \"string\",",
+									"                    \"format\": \"date\"",
+									"                }",
+									"            },",
+									"            \"required\": [\"checkin\", \"checkout\"]",
+									"        },",
+									"        \"additionalneeds\": {",
+									"            \"type\": \"string\"",
+									"        }",
+									"    },",
+									"    \"required\": [\"firstname\", \"lastname\", \"totalprice\", \"depositpaid\", \"bookingdates\", \"additionalneeds\"]",
+									"};",
+									"",
+									"",
+									"",
+									"pm.test(\"Validating schema\", () =>{",
+									"pm.response.to.have.jsonSchema(schema);",
+									"",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"_postman_id": "8f52698a-9652-4548-bee0-4ad2f6d83ed4",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{bookingurl}}/booking/:bookingid",
+							"host": [
+								"{{bookingurl}}"
+							],
+							"path": [
+								"booking",
+								":bookingid"
+							],
+							"variable": [
+								{
+									"key": "bookingid",
+									"value": "{{BookingID}}",
+									"type": "string"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"_postman_id": "54e5f55e-b88f-49f8-94d5-ca5783ed4882"
+		},
+		{
+			"name": "UpdateBooking",
+			"item": [
+				{
+					"name": "Successful Update",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "25202e1a-272e-400f-a121-0756f8376f91",
+								"exec": [
+									"pm.globals.set(\"Randomint\", pm.variables.replaceIn('{{$randomInt}}'))",
+									"pm.globals.set(\"RandomFirstName\", pm.variables.replaceIn('{{$randomFirstName}}'))",
+									"pm.globals.set(\"RandomLastName\", pm.variables.replaceIn('{{$randomLastName}}'))",
+									"",
+									""
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"id": "a46d7971-29f6-4d71-b7b1-aff652324b98",
+								"exec": [
+									"pm.test(\"To verify if Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"",
+									"pm.test(\"To verify if total price is getting updated\", function () {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData.totalprice).to.eql(parseInt(pm.globals.get(\"Randomint\")));",
+									"});",
+									"",
+									"pm.test(\"To verify if firstname and lastname is getting updated\", function () {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData.firstname).to.eql(pm.globals.get(\"RandomFirstName\"));",
+									"    pm.expect(jsonData.lastname).to.eql(pm.globals.get(\"RandomLastName\"));",
+									"});",
+									"",
+									"pm.test(\"Response time is less than 3000ms\", function () {",
+									"    pm.expect(pm.response.responseTime).to.be.below(3000);",
+									"});",
+									"",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"_postman_id": "38d46f25-d708-4c96-8d1c-2dde9f995f58",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true,
+						"disabledSystemHeaders": {
+							"accept": true
+						}
+					},
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": {
+								"password": "password123",
+								"username": "admin"
+							}
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Cookie",
+								"value": "token=abc123",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"firstname\": \"{{RandomFirstName}}\",\n    \"lastname\": \"{{RandomLastName}}\",\n    \"totalprice\": {{Randomint}},\n    \"depositpaid\": true,\n    \"bookingdates\": {\n        \"checkin\": \"2018-01-01\",\n        \"checkout\": \"2019-01-01\"\n    },\n    \"additionalneeds\": \"Breakfast\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{bookingurl}}/booking/:bookingid",
+							"host": [
+								"{{bookingurl}}"
+							],
+							"path": [
+								"booking",
+								":bookingid"
+							],
+							"variable": [
+								{
+									"key": "bookingid",
+									"value": "{{BookingID}}",
+									"type": "string"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Invalid Id",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "a1ff1ca8-8e28-47b3-a736-74fa19b78ff2",
+								"exec": [
+									"pm.test(\"Status code is 404\", function () {",
+									"    pm.response.to.have.status(404);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"_postman_id": "5decbed5-3541-4f83-a4e7-603d907a06fe",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": "{{bookingurl}}/booking"
+					},
+					"response": []
+				}
+			],
+			"_postman_id": "7e83a9aa-5b95-4f18-896a-767d557f998e"
+		},
+		{
+			"name": "PartialUpdateBooking",
+			"item": [
+				{
+					"name": "Successful Partial Update",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "5a4a3085-4d7d-45e4-b07f-abd77f982235",
+								"exec": [
+									"pm.globals.set(\"PATCH - RandomFirstName\", pm.variables.replaceIn('{{$randomFirstName}}'))",
+									"pm.globals.set(\"PATCH - RandomLastName\", pm.variables.replaceIn('{{$randomLastName}}'))"
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"id": "e74217e5-d559-4bdd-89bf-a9bb5ef74d51",
+								"exec": [
+									"pm.test(\"To verify if firstname and lastname is getting updated\", function () {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData.firstname).to.eql(pm.globals.get(\"PATCH - RandomFirstName\"));",
+									"    pm.expect(jsonData.lastname).to.eql(pm.globals.get(\"PATCH - RandomLastName\"));",
+									"    ",
+									"});",
+									"",
+									"pm.test(\"To verify if Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"_postman_id": "ad9eeca6-1dd4-45dd-8a39-4a87e0d296eb",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": {
+								"password": "password123",
+								"username": "admin"
+							}
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"firstname\" : \"{{PATCH - RandomFirstName}}\",\n    \"lastname\" : \"{{PATCH - RandomLastName}}\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{bookingurl}}/booking/:bookingid",
+							"host": [
+								"{{bookingurl}}"
+							],
+							"path": [
+								"booking",
+								":bookingid"
+							],
+							"variable": [
+								{
+									"key": "bookingid",
+									"value": "{{BookingID}}",
+									"type": "string"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"_postman_id": "076ee2b9-a3fc-4bfc-85ae-ff04f13e0e36"
+		},
+		{
+			"name": "DeleteBooking",
+			"item": [
+				{
+					"name": "Successful Delete",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "fa141c09-bbe4-4705-8c5f-d9ceb72c252b",
+								"exec": [
+									"pm.test(\"Status code is 201\", function () {",
+									"    pm.response.to.have.status(201);",
+									"});",
+									"",
+									"pm.test(\"Response time is less than 3000ms\", function () {",
+									"    pm.expect(pm.response.responseTime).to.be.below(3000);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"_postman_id": "d94f490e-abd9-4f7e-99ca-740dc7a03b87",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": {
+								"password": "password123",
+								"username": "admin"
+							}
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{bookingurl}}/booking/:bookingid",
+							"host": [
+								"{{bookingurl}}"
+							],
+							"path": [
+								"booking",
+								":bookingid"
+							],
+							"variable": [
+								{
+									"key": "bookingid",
+									"value": "{{BookingID}}",
+									"type": "string"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"_postman_id": "95ac68d2-348c-4336-a307-d6e37a96df68"
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "eb8aa7ab-3386-449e-a18b-efcbef3d7991",
+				"type": "text/javascript",
+				"exec": [
+					"pm.globals.set(\"bookingurl\", \"https://restful-booker.herokuapp.com\");"
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "c37335d1-afc3-4c32-ae2a-2986a0a80864",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
