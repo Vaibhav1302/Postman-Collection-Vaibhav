@@ -39,7 +39,7 @@
 							}
 						}
 					],
-					"_postman_id": "3e1e79f9-c5e1-438f-8d17-e0ba9f8e679e",
+					"id": "3e1e79f9-c5e1-438f-8d17-e0ba9f8e679e",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -83,7 +83,7 @@
 							}
 						}
 					],
-					"_postman_id": "c457a8f2-a328-4d9a-bf25-3c584bd5f818",
+					"id": "c457a8f2-a328-4d9a-bf25-3c584bd5f818",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -128,7 +128,7 @@
 							}
 						}
 					],
-					"_postman_id": "9495d9b8-47a4-47c7-aae3-d8da05292b2b",
+					"id": "9495d9b8-47a4-47c7-aae3-d8da05292b2b",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -169,7 +169,7 @@
 							}
 						}
 					],
-					"_postman_id": "0e48e5e3-981c-4ef4-8e30-bf82a3575aaf",
+					"id": "0e48e5e3-981c-4ef4-8e30-bf82a3575aaf",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -181,7 +181,7 @@
 					"response": []
 				}
 			],
-			"_postman_id": "8eedb065-5e4e-46f5-b25e-ac576d89e5d9",
+			"id": "8eedb065-5e4e-46f5-b25e-ac576d89e5d9",
 			"event": [
 				{
 					"listen": "prerequest",
@@ -290,7 +290,7 @@
 							}
 						}
 					],
-					"_postman_id": "a4ceef93-ef38-4ca5-9ab5-0be339291074",
+					"id": "a4ceef93-ef38-4ca5-9ab5-0be339291074",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -326,7 +326,7 @@
 							}
 						}
 					],
-					"_postman_id": "35377cfb-85ff-4b2c-ae96-f17161fc5da3",
+					"id": "35377cfb-85ff-4b2c-ae96-f17161fc5da3",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -347,7 +347,7 @@
 					"response": []
 				}
 			],
-			"_postman_id": "b72edf8d-ca73-4489-9f84-feef79ccd191"
+			"id": "b72edf8d-ca73-4489-9f84-feef79ccd191"
 		},
 		{
 			"name": "GetBooking",
@@ -388,7 +388,7 @@
 							}
 						}
 					],
-					"_postman_id": "f6992cd8-67d5-4914-be86-8c612042d133",
+					"id": "f6992cd8-67d5-4914-be86-8c612042d133",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -407,8 +407,7 @@
 							"variable": [
 								{
 									"key": "bookingid",
-									"value": "{{BookingID}}",
-									"type": "string"
+									"value": "{{BookingID}}"
 								}
 							]
 						}
@@ -431,7 +430,7 @@
 							}
 						}
 					],
-					"_postman_id": "1dd5ccd5-39c7-48d2-8de4-7ec000160e7e",
+					"id": "1dd5ccd5-39c7-48d2-8de4-7ec000160e7e",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -497,7 +496,7 @@
 							}
 						}
 					],
-					"_postman_id": "8f52698a-9652-4548-bee0-4ad2f6d83ed4",
+					"id": "8f52698a-9652-4548-bee0-4ad2f6d83ed4",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -516,8 +515,7 @@
 							"variable": [
 								{
 									"key": "bookingid",
-									"value": "{{BookingID}}",
-									"type": "string"
+									"value": "{{BookingID}}"
 								}
 							]
 						}
@@ -525,7 +523,7 @@
 					"response": []
 				}
 			],
-			"_postman_id": "54e5f55e-b88f-49f8-94d5-ca5783ed4882"
+			"id": "54e5f55e-b88f-49f8-94d5-ca5783ed4882"
 		},
 		{
 			"name": "UpdateBooking",
@@ -578,7 +576,7 @@
 							}
 						}
 					],
-					"_postman_id": "38d46f25-d708-4c96-8d1c-2dde9f995f58",
+					"id": "38d46f25-d708-4c96-8d1c-2dde9f995f58",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true,
 						"disabledSystemHeaders": {
@@ -628,8 +626,7 @@
 							"variable": [
 								{
 									"key": "bookingid",
-									"value": "{{BookingID}}",
-									"type": "string"
+									"value": "{{BookingID}}"
 								}
 							]
 						}
@@ -652,7 +649,7 @@
 							}
 						}
 					],
-					"_postman_id": "5decbed5-3541-4f83-a4e7-603d907a06fe",
+					"id": "5decbed5-3541-4f83-a4e7-603d907a06fe",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -664,7 +661,7 @@
 					"response": []
 				}
 			],
-			"_postman_id": "7e83a9aa-5b95-4f18-896a-767d557f998e"
+			"id": "7e83a9aa-5b95-4f18-896a-767d557f998e"
 		},
 		{
 			"name": "PartialUpdateBooking",
@@ -703,7 +700,7 @@
 							}
 						}
 					],
-					"_postman_id": "ad9eeca6-1dd4-45dd-8a39-4a87e0d296eb",
+					"id": "ad9eeca6-1dd4-45dd-8a39-4a87e0d296eb",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -738,8 +735,7 @@
 							"variable": [
 								{
 									"key": "bookingid",
-									"value": "{{BookingID}}",
-									"type": "string"
+									"value": "{{BookingID}}"
 								}
 							]
 						}
@@ -747,7 +743,7 @@
 					"response": []
 				}
 			],
-			"_postman_id": "076ee2b9-a3fc-4bfc-85ae-ff04f13e0e36"
+			"id": "076ee2b9-a3fc-4bfc-85ae-ff04f13e0e36"
 		},
 		{
 			"name": "DeleteBooking",
@@ -772,7 +768,7 @@
 							}
 						}
 					],
-					"_postman_id": "d94f490e-abd9-4f7e-99ca-740dc7a03b87",
+					"id": "d94f490e-abd9-4f7e-99ca-740dc7a03b87",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -798,8 +794,7 @@
 							"variable": [
 								{
 									"key": "bookingid",
-									"value": "{{BookingID}}",
-									"type": "string"
+									"value": "{{BookingID}}"
 								}
 							]
 						}
@@ -807,7 +802,7 @@
 					"response": []
 				}
 			],
-			"_postman_id": "95ac68d2-348c-4336-a307-d6e37a96df68"
+			"id": "95ac68d2-348c-4336-a307-d6e37a96df68"
 		}
 	],
 	"event": [
